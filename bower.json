@@ -1,0 +1,27 @@
+{
+  "name": "FooterSlideUp-Down",
+  "version": "1.0.0",
+  "authors": [
+    "Hamase <hamase86@gmail.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "less": "less.js#~2.5.3",
+    "bootstrap-rtl": "~3.3.4"
+  }
+}

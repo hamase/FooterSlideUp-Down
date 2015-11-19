@@ -1,0 +1,125 @@
+
+@import "bower_components/bootstrap/less/bootstrap.less";
+@import "bower_components/bootstrap-rtl/less/bootstrap-rtl.less";
+
+@headings-font-family:    'P Yekan';
+
+
+//overrides
+@footer-background-color: #3B4C57;
+@white: #FFF;
+@align: "right";
+@reverse-align: "left";
+@background-image: url(images/background2.jpg);
+@navbar-default-background-color: #F8F8F8;
+@navbar-default-border-color: #E7E7E7;
+@wheat : wheat;
+@slide-color: rgb(25, 167, 1);
+@logo-height: 60px;
+
+body{
+    font-family: 'P Yekan', tahoma, Arial;
+    background-image: @background-image;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+a:hover{
+    text-decoration: none;
+}
+.logoMixin(@size: @logo-height){
+    height: @size;
+    margin: floor(@size/3) 0 0 0;
+}
+.logo{
+    .logoMixin();
+    width: auto;
+    float: @reverse-align; 
+}
+.contents{
+    margin: 0 auto; 
+    text-align: justify; 
+    color: #000; 
+    padding: 20px 0;
+    font-size: @font-size-h4;
+}
+#Footer{
+    height: auto;
+}
+div.footer{
+    bottom: 0px;
+    position: fixed;
+    z-index: 101;
+    left: 0%;
+    right: 0%;
+}
+div.footer-clr{
+    background-color: @footer-background-color;
+}
+div.footer-right , div.footer-middle{ 
+    border-left: 1px groove @white;
+    float: @align;
+}
+div.footer-left{
+    float: @align;
+}
+div.footer-contents{
+    color: @white;
+    /*font-weight: bold;*/
+    text-align: @align;
+}
+div.footer-contents:hover{
+    cursor: pointer;
+}
+.navbar{
+    margin-bottom: 0;
+}
+.heading-container{
+    background-color: @white;
+}
+.content-container{
+    background-color: @white;
+}
+.navbar-default {
+    background-image: linear-gradient(to bottom, #ECECEC 0px, @white 50%, #ECECEC 100%);
+    background-repeat: repeat-x;
+    border-radius: 4px;
+    box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.15) inset, 0px 1px 5px rgba(0, 0, 0, 0.075);
+}
+.navbar-default {
+    background-color: @navbar-default-background-color;
+    border-color: @navbar-default-border-color;
+}
+.slide-down{
+    font-size: @font-size-h3;
+    color: @slide-color;
+}
+.slide-up{
+    float: @align;
+    font-size: @font-size-h3;
+    color: @wheat; 
+    bottom: 0; 
+    position: fixed; 
+    color: @slide-color;
+}
+@media only screen and (min-width: 299px) and (max-width: 900px) {
+    div.menu-section{
+        margin: 20px auto;
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 299px) and (max-width: 1000px) {
+    div.footer{
+        height: 200px;
+    }
+
+    div.footer-right{ 
+        border-left: 0;
+        border-bottom: 1px groove @white;
+        float: @align;
+    }
+    div.footer-middle{ 
+        border-left: 0;
+        border-bottom: 1px groove @white;
+        float: @reverse-align;
+    }
+}
